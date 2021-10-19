@@ -8,6 +8,7 @@ import { Telas } from "../../utils/enums/telas";
 
 export default function Playlists() {
     const [musics, setMusics] = useState([]);
+    //Change de Authorization Token for a valid token in Spotify's API
     const token = "Bearer BQBcc7xK-RhqzEnriy4RslTd66D8dtU_thh8ya5nZAW5G4p5zIi_N1IU-C-DVk1bW_PHKwe4EvPPn8P9kB-rVhUF6XdRnF-2j9v-knODHpUBkhFYdRZzTRAdI1k_ZO0agTyHDWdFcDb0aVoR0KqADwJBN2RIHjwVwbk";
     const navigation = useNavigation();
 
@@ -26,7 +27,7 @@ export default function Playlists() {
             <FlatList
                 data={musics}
                 renderItem={({ item }) => (
-                    <TouchableOpacity style={styles.containerPedidos} onPress={() => navigation.navigate(Telas.playlistsTracks, { idPlaylist: item.id, playlistName: item.name})} >
+                    <TouchableOpacity style={styles.containerPedidos} onPress={() => navigation.navigate(Telas.playlistsTracks, { idPlaylist: item.id, playlistName: item.name })} >
                         <View>
                             <Text style={styles.txtOs}>Playlist: {String(item.name).length > 22 ? String(item.name).substr(0, 22) + '...' : item.name}</Text>
                             <Image source={{ uri: item.images[0].url }} style={styles.imageStyle} />
