@@ -17,3 +17,6 @@
 <p>Run react-native run-ios (or run-android if your prefer) to start the mobile app</p>
 
 Note: If you choose to start the mobile app in the android emulator, you will have to start the emulator before using the run-android command.
+
+To Start the spotify API follow de instruction in link below
+<p>https://developer.spotify.com/documentation/web-api/quick-start/</p>
